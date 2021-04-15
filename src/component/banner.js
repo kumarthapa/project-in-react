@@ -4,7 +4,7 @@ function Banner (){
 
     return (
             <div style={{textAlign:'center'}}>
-                <img src={bannerImage} alt="bannerImage"/>
+                <img src={bannerImage} className="img-fluid" alt="bannerImage"/>
             </div>
 
     )
