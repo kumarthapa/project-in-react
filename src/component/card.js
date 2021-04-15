@@ -9,7 +9,7 @@ function Card (props){
                 <div className="card-body">
                 <p className="card-title">{props.title}</p>
                 <p className="card-text">Nullamlacus duii ipsum conseque loborttis non
-                euisque morbi penas dapibulam orna</p>
+                euisque morbi penas </p>
                 <div style={{textAlign:'end'}}><p className="btn btn-warning">Read more</p></div>
                 </div>
                 </div>
