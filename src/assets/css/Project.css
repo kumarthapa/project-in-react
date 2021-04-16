@@ -1,3 +1,7 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
 .P1navmenu li a{
     color: white;
     background-color: black;
@@ -9,7 +13,104 @@
   .P1navmenu li a:active {
     background-color: rgb(110, 98, 219);
 }
+/* navbar menu style===>> */
+.headerlogo{
+  text-decoration: none;
+  color: whitesmoke;
+  position: absolute;
+  top: 15px;
+}
 
+.headerContainer{
+  width: 50%;
+  margin:auto;
+}
+.HeaderMenu {
+  float: right;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.HeaderMenu li {
+    display: inline-block;
+    font-size: 17px;
+    padding: 30px 5px 39px 10px;
+    list-style: none;
+}
+.HeaderMenu li a{
+text-decoration: none;
+}     
+/* <<===navbar menu style */
+
+
+/* boody section card style */
+.cardGrid{
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap:10px;
+  flex-wrap: wrap;
+}
+.Bodyimages{
+  border-radius: 8px;
+}
+.ReadmoreButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: orange;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.Cardcontant{
+  padding: 8px;
+  border: 2px solid rgb(54 68 52 / 8%);
+  border-radius: 10px;
+}
+/* boody section card style */
+
+/* footer  section style */
+.footerLink{
+  padding-top: 40px;
+  padding-bottom: 40px;
+ }
+.footerLink ul li{
+ padding: 5px;
+ color: whitesmoke;
+ list-style: none;
+ border-bottom: 1px solid gray;
+}
+.footerLink li a{
+  text-align: center;
+  color: orange;
+  text-decoration: none;
+ }
+/* footer  style */
+/* bottom section style */
+.bottomsection{
+max-width: 940px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 8px;
+border: 2px solid rgb(54 68 52 / 8%);
+border-radius: 10px;
+}
+
+/* bottom section style */
+/* contact us form style===>> */
  input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -73,3 +174,58 @@
       margin-top: 0;
     }
   } 
+  @media screen and (max-width: 768px) {
+    .HTcontainer{
+      width: 90%;
+    }
+    .headerContainer{
+      width: 90%;
+    }
+    .HeaderMenu li {
+      display: inline-block;
+      font-size: 13px;
+      list-style: none;
+      padding: 68px 0px 25px 0px;
+  }
+  .ReadmoreButton {
+    font-size: 10px;
+}
+.Cardcontant {
+
+  font-size: 14px;
+}
+
+
+    .headerlogo {
+      top: 15px;
+      font-size: 10px;
+  }
+  } 
+  @media screen and (max-width: 360px) {
+    .HTcontainer{
+    width: 98%;
+    }
+    .headerlogo{
+      display: none;
+    }
+    .headerContainer{
+      width: 100%;
+    }
+    .HeaderMenu li {
+    display: inline-block;
+    font-size: 13px;
+    list-style: none;
+    padding: 25px 0px 25px 0px;
+  }
+  .ReadmoreButton {
+    font-size: 10px;
+}
+.Cardcontant{
+  font-size: 13px;
+}
+.footerLink ul li {
+  font-size: 13px;
+  padding: 0px;
+}
+  } 
+/* <===contact us form style */

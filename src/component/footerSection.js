@@ -4,21 +4,21 @@ import Footer from './footer';
 function FooterSection (){
     return (
 
-        <div className="container-fluid bg-dark mt-4">
-            <div class="row " style={{maxWidth:'60%',marginLeft:'auto',marginRight:'auto'}}>
-            <div class="col-sm py-5">
+        <div style={{backgroundColor:'black'}}>
+            <div style={{maxWidth:'960px',marginLeft:'auto',marginRight:'auto', display:'flex'}}>
+            <div style={{width:'100%', padding:'5px'}}>
             <Footer/>
             </div>
-            <div class="col-sm py-5">
+            <div style={{width:'100%', padding:'5px'}}>
             <Footer/>
             </div>
-            <div class="col-sm py-5">
+            <div style={{width:'100%', padding:'5px'}}>
             <Footer/>
             </div>
-            <div class="col-sm py-5">
+            <div style={{width:'100%', padding:'5px'}}>
             <Footer/>
             </div>
-            <div class="col-sm py-5">
+            <div style={{width:'100%', padding:'5px'}}>
             <Footer/>
             </div>
             </div>

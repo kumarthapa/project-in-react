@@ -4,13 +4,13 @@ function Card (props){
 
     return (
         <div>
-                <div className="card" style={{width:'100%'}}>
-                <img src={CardImage} className="card-img-top" alt="CardImage"/>
-                <div className="card-body">
-                <p className="card-title">{props.title}</p>
-                <p className="card-text">Nullamlacus duii ipsum conseque loborttis non
+                <div className="Cardcontant">
+                <img className='Bodyimages' src={CardImage} width="100%" alt="CardImage"/>
+                <div>
+                <p>{props.title}</p>
+                <p>Nullamlacus duii ipsum conseque loborttis non
                 euisque morbi penas </p>
-                <div style={{textAlign:'end'}}><p className="btn btn-warning">Read more</p></div>
+                <div style={{textAlign:'end'}}><button className="ReadmoreButton">Read more</button></div>
                 </div>
                 </div>
         </div>
