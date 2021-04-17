@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 
 import Navbar from './component/navbar';
 import FooterSection from './component/footerSection';
@@ -11,12 +11,13 @@ import Shop from './component/pages/Shop';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
-function App(){
-    return (
 
+export default class App extends Component {
+    render() {
+        return (
+            <div>
             <Router>
             <Navbar/>
-            
             <Switch>
                 <Route exact path="/project-in-react" component ={Home}/>
                 <Route exact path="/contact" component ={Contact}/>
@@ -26,7 +27,7 @@ function App(){
             </Switch>
             <FooterSection/>
             </Router>
-
-    )
+            </div>
+        )
+    }
 }
-export default App

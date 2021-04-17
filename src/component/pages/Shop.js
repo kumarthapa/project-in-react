@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Turmeric from '../../assets/images/Turmeric.jpg'
-function Shop (){
-
-    return (
+import {products} from '../../assets/helper/helper';
+export default class Shop extends Component {
+    render() {
+        return (
             <div className="HTcontainer">
                 <table>
                 <tr>
-                    <th colSpan='2'><h1>Our products</h1></th>
+                    <th colSpan='2'><h1>{products()}</h1></th>
                 </tr>
                 <tr>
                     <td><img src={Turmeric}  alt="Turmeric" width="60%"/></td>
@@ -14,7 +15,6 @@ function Shop (){
                 </tr>
                 </table>
             </div>
-
-    )
+        )
+    }
 }
-export default Shop

@@ -1,18 +1,17 @@
-import React from 'react'
-
-function Contact (){
-
-    return (
+import React, { Component } from 'react'
+import {Formheading,Nameheadingtext,Name,Email,Phone} from '../../assets/helper/helper';
+export default class Contact extends Component {
+    render() {
+        return (
             <div>
-               
-                <div className="HTcontainer">
-                <h2>Responsive Form</h2>
-                <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+              <div className="HTcontainer">
+                <h2>{Formheading()}</h2>
+                <p>{Nameheadingtext()}</p>
 
                 <form>
                 <div className="HTrow">
                     <div className="col-25">
-                    <label for="fname">Name</label>
+                    <label for="fname">{Name()}</label>
                     </div>
                     <div className="col-75">
                     <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
@@ -20,7 +19,7 @@ function Contact (){
                     </div>
                     <div className="HTrow">
                     <div className="col-25">
-                    <label for="email">Email</label>
+                    <label for="email">{Email()}</label>
                     </div>
                     <div className="col-75">
                     <input type="text" id="email" name="email" placeholder="Your email.."/>
@@ -28,7 +27,7 @@ function Contact (){
                     </div>
                     <div className="HTrow">
                     <div className="col-25">
-                    <label for="fname">Phone</label>
+                    <label for="fname">{Phone()}</label>
                     </div>
                     <div className="col-75">
                     <input type="text" id="phone" name="phone" placeholder="Your phone.."/>
@@ -38,9 +37,9 @@ function Contact (){
                     <input type="submit" value="Submit"/>
                     </div>
                     </form> 
-                    </div>
-                    </div>
-
-    )
+                     <br/><br/><br/>
+                    </div>  
+            </div>
+        )
+    }
 }
-export default Contact

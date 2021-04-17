@@ -1,30 +1,29 @@
-import React from 'react';
 
-function Footer (){
-
+import React, { Component } from 'react'
+import {LINKBLOCK,sampledata} from '../assets/helper/helper';
+export default class Footer extends Component {
+  render() {
     return (
-     
-          <div className="footerLink">
+      <div className="footerLink">
             <ul>
-            <li style={{border:'none'}}>LINK BLOCK</li>
+            <li style={{border:'none'}}>{LINKBLOCK()}</li>
             <li>
-            <a className="text-warning"href="#">lorem sample site</a>
+            <a className="text-warning"href="#">{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">lorem sample site</a>
+            <a className="text-warning"href="#">{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">lorem sample site</a>
+            <a className="text-warning"href="#">{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">lorem sample site</a>
+            <a className="text-warning"href="#">l{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">lorem sample site</a>
+            <a className="text-warning"href="#">{sampledata()}</a>
             </li>
             </ul>
           </div> 
-
     )
+  }
 }
-export default Footer;

@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Banner from '../banner';
 import BodySection from '../BodySection';
-function Home (){
 
-    return (
+
+export default class Home extends Component {
+    render() {
+        return (
             <div>
-            <Banner/>
-            <BodySection/>
+                <Banner/>
+                <BodySection/>
             </div>
-
-    )
+        )
+    }
 }
-export default Home
