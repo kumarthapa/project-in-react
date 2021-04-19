@@ -1,4 +1,4 @@
-// Navbar Component string data ==>>
+// Navbar Component ==>>
 export function BASIC(){
     return 'BASIC 88';
 }

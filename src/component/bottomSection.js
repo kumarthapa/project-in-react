@@ -12,7 +12,7 @@ export default class bottomSection extends Component {
             <p>{Nullamlacustext()}</p>
             <div style={{textAlign:'end'}}><button className="ReadmoreButton">{Rdmrbtn()}</button></div>
             </div>
-            <div tyle={{flex:'1.5'}}>
+            <div>
             <img style={{width:'100%'}} className="Bodyimages" src={BottomImage} alt="BottomImage"/>
             </div>
         </div>
