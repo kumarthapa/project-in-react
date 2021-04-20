@@ -4,8 +4,8 @@ export default class About extends Component {
     render() {
         return (
             <div className="HTcontainer">
-                <h1>{Aboutus()}</h1>
-                <hr/>
+                <h1>{Aboutus()}</h1><br/>
+                <hr/><br/>
                 <p>{WhoWeAre()}</p>
             </div>
         )

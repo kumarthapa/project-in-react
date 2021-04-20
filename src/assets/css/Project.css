@@ -2,13 +2,32 @@
   box-sizing: border-box;
   padding: 0%;
   margin: 0%;
+  font-family: sans-serif;
 }
+/* main-conatiner style */
+  .main-conatiner{
+    width: 50vw;
+    margin: auto;
+  }
+/* main-conatiner style */
+
+.ReadmoreButton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: orange;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
 /* navbar style ======>> */
 .navContant{
-    /* background-color: black;
-    height: 80px;
-    width: 100%;
-    position: fixed; */
     background-color: black;
     position: sticky;
     top: 0;
@@ -21,7 +40,6 @@
 .NavbarItems{
     padding-top: 1%;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     font-size: 1.2rem;
     width: 50%;
@@ -32,7 +50,6 @@
   font-size: 30px;
   color: #FFFFFF;
   justify-self: start;
-  /* margin-left: 20px; */
   cursor: pointer;
 }
 .nav-menu{
@@ -56,145 +73,70 @@
 .menu-icone{
   display: none;
 }
-@media screen and (max-width: 1200px) {
+/* navbar style ======>> */
 
-.NavbarItems {
-  position: relative;
-  width: 80%;
-  margin: auto;
-}
-.nav-menu {
-  grid-gap: 3px;
-  width: 100%;
-}
-}
-@media screen and (max-width: 960px) {
-  .navbar-logo {
-    position: relative;
-    font-size: 30px;
-    padding: 20px;
-}
-  .navContant {
-    background-color: #f29d01;
-}
-  .NavbarItems {
-    padding-top: 0%;
-    position: relative;
-    width: 100%;
-    margin: auto;
-}
-  .nav-menu{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 100vh;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-  }
-  .nav-menu.active {
-    background-color: black;
-    left: 0;
-    opacity: 1;
-    z-index: 1;
-  }
-  .nav-links:hover {
-    background-color: rgb(110, 98, 219);
-    border-radius: 3px;
-  }
-  .nav-links{
-    /* text-align: center; */
-    /* padding: 2rem; */
-    width: 100%;
-    display: table;
-  }
-  .navbar.logo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
-  .menu-icone{
-    color: #FFFFFF;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-}
-/* navbar style <<======*/
-.cardGrid{
-  max-width: 960px;
-  margin: auto;
+
+/* card section */
+.card{
   display: flex;
   justify-content: space-around;
-  padding: 8px;
-  /* display: grid;
-  grid-template-columns: repeat(3,1fr); */
-  /* grid-column-gap:10px; */
-  /* flex-wrap: wrap; */
+  padding: 6px;
 }
-.Bodyimages{
-  border-radius: 8px;
-}
-.ReadmoreButton {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: orange;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px;
-  width: auto;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
+.card div{
+  flex:1;
 }
 .Cardcontant{
+  width: 100%;
   padding: 8px;
   border: 2px solid rgb(54 68 52 / 8%);
   border-radius: 10px;
 }
-/* boody section card style */
-
-
-
-/* footer  section style */
-.footerLink{
-  padding-top: 40px;
-  padding-bottom: 40px;
- }
-.footerLink ul li{
- padding: 5px;
- color: whitesmoke;
- list-style: none;
- border-bottom: 1px solid gray;
+.cardText{
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 100;
 }
-.footerLink li a{
-  text-align: center;
-  color: orange;
-  text-decoration: none;
- }
-/* footer  section style */
+.Cardimages{
+  border-radius: 4px;
+}
+/* card section */
+
+/* banner style */
+.banner{
+  width: 98%;
+  padding: 10px;
+  border-radius: 8px;
+  margin: auto;
+  border: 1px solid rgb(54 68 52 / 8%);
+}
+#bannerImg{
+  border-radius: 8px;
+  margin: auto;
+}
+/* banner style */
 
 
 /* bottom section style */
 .bottomsection{
-max-width: 940px;
-margin-left: auto;
-margin-right: auto;
 margin-top: 20px;
 display: flex;
 justify-content: space-around;
-flex-wrap: wrap;
 padding: 8px;
 border: 2px solid rgb(54 68 52 / 8%);
 border-radius: 10px;
+}
+.Bottomimages{
+  border-radius: 10px;
+}
+.bottomText{
+  flex: 1.5;
+  padding: 10px;
+  font-weight: 100;
+  font-size: 15px;
+  padding-top: 20px;
+}
+.bottomimagecontant{
+  width: 50%;
 }
 /* bottom section style */
 
@@ -226,12 +168,12 @@ border-radius: 10px;
     background-color: #45a049;
   }
   .HTcontainer {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    width:50%;
+    margin:auto;
+    text-align: center;
   } 
   .col-25 {
     float: left;
@@ -249,81 +191,123 @@ border-radius: 10px;
     clear: both;
   }
   
-  @media screen and (max-width: 768px) {
-    .navbar-logo {
-      position: relative;
-      font-size: 28px;
-      padding: 24px;
+  /* footer  section style */
+  .footerCompo{
+    width: 50%;
+    margin: auto;
+    display: flex;
   }
-    .HTcontainer{
-      width: 90%;
-    }
-    .nav-menu {
-      width: 40%;
-      height: 100vh;
-      font-size: 17px;
-  }
-  .ReadmoreButton {
-    font-size: 10px;
-}
-.Bodyimages {
-  border-radius: 6px;
-  width: -webkit-fill-available;
-}
-.Cardcontant {
-  width: 100%;
-  font-size: 14px;
-}
-.cardGrid{
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-  flex-wrap: wrap;
-}
-  .col-25, .col-75, input[type=submit] {
+  .footerCompo div{
     width: 100%;
-    margin-top: 0;
+    flex:1;
+    text-align: center;
   }
-}
-/* contact us form style===>> */
+  .footerLink{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .footerLink ul li{
+  padding: 5px;
+  color: whitesmoke;
+  list-style: none;
+  }
+  .footerLink li a{
+    text-align: center;
+    color: orange;
+    text-decoration: none;
+    border-bottom: 1px solid gray;
+  }
 
-  @media screen and (max-width: 360px) {
-    .navbar-logo {
-      position: absolute;
-      font-size: 22px;
-  }
+
+/* user table */
+.userTable{
+  width: 100%;
+  font-size: x-small;
+}
+/* user table */
+
+
+/* footer  section style */
+
+
+  /* all @media */
+  @media screen and (max-width: 1200px) {
+    .main-conatiner{
+      width: 70vw;
+      align-items: center;
+      margin: auto;
+    }
     .NavbarItems {
-      padding-top: 8%;
+      position: relative;
+      width: 70%;
+      margin: auto;
   }
-    .nav-menu {
-      width: 50%;
-      height: 100vh;
-      font-size: 16px;
+  .cardText{
+    padding: 10px;
+    font-size: 15px;
   }
-    .cardGrid{
+
+  .footerCompo{
+    width: 70vw;
+  }
+  
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-conatiner{
+      width: 100vw;
+      align-items: center;
+      margin: auto;
+    }
+    .NavbarItems {
+      position: relative;
       width: 100%;
       margin: auto;
+  }
+    .nav-menu {
       display: flex;
-      justify-content: space-around;
-      padding: 8px;
-      flex-wrap: wrap;
-    }
-    .HTcontainer{
-    width: 98%;
-    }
-    .headerlogo{
-      display: none;
-    }
-    .headerContainer{
-      width: 100%;
-    }
-    .HeaderMenu li {
-    display: inline-block;
-    font-size: 13px;
-    list-style: none;
-    padding: 25px 0px 25px 0px;
+      flex-direction: column;
+      width: 50%;
+      height: 100vh;
+      position: absolute;
+      font-size: 17px;
+      top: 80px;
+      left: -80%;
+      padding-left: 20px;
+      opacity: 1;
+      transition: all 0.5s ease;
+  }
+  .nav-menu.active{
+    background-color: black;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-links{
+    padding: 1rem;
+    width: 100%;
+    display: table;
+  }
+  .nav-links:hover {
+    background-color: rgb(110, 98, 219);
+    border-radius: 3px;
+  }
+  .navbar-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+  .menu-icone{
+    display: block;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
   }
   .ReadmoreButton {
     font-size: 10px;
@@ -331,9 +315,81 @@ border-radius: 10px;
 .Cardcontant{
   font-size: 13px;
 }
-.footerLink ul li {
-  font-size: 13px;
-  padding: 0px;
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 6px;
 }
+.cardText{
+  padding: 10px;
+  font-size: 15px;
+}
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .bottomimagecontant{
+    width: 100%;
+  }
+  .bottomsection{
+    display: flex;
+    flex-direction: column;
+    }
+    .footerCompo{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100vw;
+    }
+    .footerCompo div{
+      width: max-content;
+      text-align: center;
+      padding: 10px;
+    }
+    .HTcontainer {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width:70%
+    } 
+}
+
+  @media screen and (max-width: 360px) {
+    .main-conatiner{
+      width: 100vw;
+      margin: auto;
+    }
+    .HTcontainer{
+    width: 98%;
+    }
+    .headerContainer{
+      width: 100%;
+    }
+    .cardText{
+      padding: 10px;
+      font-size: 15px;
+    }
+
+  .ReadmoreButton {
+    font-size: 10px;
+}
+
+.footerCompo{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.footerCompo div{
+  width: 100%;
+  text-align: center;
+}
+.footerLink ul li {
+  font-size: 17px;
+}
+.HTcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 7px;
+  width:100%
+} 
   } 
-/* <===contact us form style */

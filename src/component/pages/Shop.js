@@ -7,7 +7,7 @@ export default class Shop extends Component {
             <div className="HTcontainer">
                 <table>
                 <tr>
-                    <th colSpan='2'><h1>{products()}</h1></th>
+                    <th colSpan='2'><br/><h2>{products()}</h2><br/><hr/><br/></th>
                 </tr>
                 <tr>
                     <td><img src={Turmeric}  alt="Turmeric" width="60%"/></td>

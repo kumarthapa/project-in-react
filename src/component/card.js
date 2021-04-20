@@ -5,16 +5,14 @@ import {Nullamlacusduii,Rdmrbtn} from '../assets/helper/helper';
 export default class card extends Component {
     render() {
         return (
-            <div>
                 <div className="Cardcontant">
-                <img className='Bodyimages' src={CardImage} width="100%" alt="CardImage"/>
-                <div>
+                <img className='Cardimages' src={CardImage} width="100%" alt="CardImage"/>
+                <div className="cardText">
                 <p>{this.props.title}</p>
                 <p>{Nullamlacusduii()}</p>
                 <div style={{textAlign:'end'}}><button className="ReadmoreButton">{Rdmrbtn()}</button></div>
                 </div>
                 </div>
-            </div>
         )
     }
 }

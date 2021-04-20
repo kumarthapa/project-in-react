@@ -8,19 +8,19 @@ export default class Footer extends Component {
             <ul>
             <li style={{border:'none'}}>{LINKBLOCK()}</li>
             <li>
-            <a className="text-warning"href="#">{sampledata()}</a>
+            <a href="#">{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">{sampledata()}</a>
+            <a href="#">{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">{sampledata()}</a>
+            <a href="#">{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">l{sampledata()}</a>
+            <a href="#">l{sampledata()}</a>
             </li>
             <li>
-            <a className="text-warning"href="#">{sampledata()}</a>
+            <a href="#">{sampledata()}</a>
             </li>
             </ul>
           </div> 

@@ -7,14 +7,15 @@ export default class BodySection extends Component {
     render() {
         return (
             <>
-            <div className="cardGrid">
-                <div style={{flex:'1'}}>
+            
+            <div className="card">
+                <div>
                 <Card title="Indonectetus facilis"/>
                 </div>
-                <div style={{flex:'1'}}>
+                <div>
                 <Card title="Indonectetus wipiya"/>
                 </div>
-                <div style={{flex:'1'}}>
+                <div>
                 <Card title="Indonectetus kestore"/>
                 </div>
             </div>

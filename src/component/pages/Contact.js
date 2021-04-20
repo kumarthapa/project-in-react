@@ -6,8 +6,9 @@ export default class Contact extends Component {
             <div>
               <div className="HTcontainer">
                 <h2>{Formheading()}</h2>
+                <br/>
                 <p>{Nameheadingtext()}</p>
-
+                <br/>
                 <form>
                 <div className="HTrow">
                     <div className="col-25">
@@ -34,6 +35,7 @@ export default class Contact extends Component {
                     </div>
                     </div>
                     <div className="row">
+                        <br/>
                     <input type="submit" value="Submit"/>
                     </div>
                     </form> 
