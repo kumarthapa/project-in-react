@@ -7,19 +7,19 @@ export default class FooterSection extends Component {
         return (
             <div style={{backgroundColor:'black'}}>
             <div className="footerCompo">
-            <div>
+            <div className="footerLink">
             <Footer/>
             </div>
-            <div>
+            <div className="footerLink">
             <Footer/>
             </div>
-            <div>
+            <div className="footerLink">
             <Footer/>
             </div>
-            <div>
+            <div className="footerLink">
             <Footer/>
             </div>
-            <div>
+            <div className="footerLink">
             <Footer/>
             </div>
             </div>

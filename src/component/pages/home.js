@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Banner from '../banner';
 import BodySection from '../BodySection';
-import UserList from './userList'
+import UserData from '../UserData/UserData'
 
 
 
@@ -10,7 +10,7 @@ export default class Home extends Component {
         return (
             <div className="main-conatiner">
                 <Banner/>
-                <UserList/>
+                <UserData/>
                 <BodySection/>
             </div>
         )
