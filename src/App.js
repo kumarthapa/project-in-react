@@ -27,7 +27,7 @@ export default class App extends Component {
                 <Route exact path="/services" component ={Services}/>
                 <Route exact path="/shop" component ={Shop}/>
                 <Route exact path="/home/adduser" component ={Adduser}/>
-                <Route exact path="/home/edituser" component ={Edituser}/>
+                <Route exact path="/home/edituser:id" component ={Edituser}/>
             </Switch>
             <FooterSection/>
             </Router>

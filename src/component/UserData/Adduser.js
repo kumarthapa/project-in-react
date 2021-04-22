@@ -12,11 +12,19 @@ export default class Adduser extends Component {
       this.setState({[e.target.name]: e.target.value});
     }
     
-    onSubmitform = async e =>{
-        e.preventDefault();
-        await axios.post("https://jsonplaceholder.typicode.com/users", this.state)
-        console.log(this.state);
-    }
+        
+        onSubmitform = (e) =>{
+            e.preventDefault();
+            console.log(this.state);
+            axios.post("http://localhost:3003/users", this.state)
+            .then(response =>{
+                console.log(response);
+                
+            })
+            .catch(error =>{
+                console.log("heloo sorry sorry" + error);
+            })
+        }
     render() {
         return (
             <div>

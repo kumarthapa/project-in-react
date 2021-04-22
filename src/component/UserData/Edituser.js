@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { useParams} from 'react-router-dom';
+
+export const TaskDetail = () => {
+  const {id} = useParams();
+    return (
+      <div>
+        Yo {id}
+      </div>
+    );
+};
 
 export default class Edituser extends Component {
     state = {
@@ -14,21 +24,21 @@ export default class Edituser extends Component {
     
     onSubmitform = async e =>{
         e.preventDefault();
-        await axios.post("https://jsonplaceholder.typicode.com/users", this.state)
+        await axios.post("http://localhost:3003/users", this.state)
         console.log(this.state);
     }
     componentDidMount = async e =>{
         // e.preventDefault();
-       const  result = await axios.get("https://jsonplaceholder.typicode.com/users/")
+       const  result = await axios.get("http://localhost:3003/users")
         console.log(result);
     }
     render() {
         return (
             <div>
               <div className="HTcontainer">
-                <h2>Add user</h2>
+                <h2>Edit user</h2>
                 <br/>
-                <p>You can add user</p>
+                <p>You can Edit user</p>
                 <br/>
                 <form onSubmit={this.onSubmitform}>
                 <div className="HTrow">
@@ -62,6 +72,7 @@ export default class Edituser extends Component {
                     </form> 
                      <br/><br/><br/>
                     </div>  
+                    <TaskDetail/>
             </div>
         )
     }

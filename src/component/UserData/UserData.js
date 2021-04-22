@@ -6,9 +6,9 @@ export default class UserData extends Component {
     state = {
         users: []
     }
-
+    
     componentDidMount = async () =>{
-       const result = await axios.get("https://jsonplaceholder.typicode.com/users");
+       const result = await axios.get("http://localhost:3003/users");
        console.log(result.length);
        if(result){
            this.setState({users:result.data});
@@ -19,6 +19,7 @@ export default class UserData extends Component {
        
     }
     render() {
+        const userId = this.state.users.id;
         return (
             <div className="userTablecontant">
                 <h2>USER TABLE<span><button className="ReadmoreButton"><Link  to="/home/adduser">Add More +</Link></button></span></h2>
@@ -41,9 +42,9 @@ export default class UserData extends Component {
                             <td>{user.email}</td>
                             <td>{user.phone}</td>
                             <td style={{textAlign:'center', padding:'0'}}>
-                                <button className="ReadmoreButton"><Link  to="#">view</Link></button></td>
+                                <button className="ReadmoreButton"><Link  to="#" userId={userId}>view</Link></button></td>
                             <td style={{textAlign:'center', padding:'0'}}>
-                                <button className="ReadmoreButton"><Link  to="/home/edituser">Edit</Link></button></td>
+                                <button className="ReadmoreButton"><Link  to="/home/edituser:id" userId={userId}>Edit</Link></button></td>
                             <td style={{textAlign:'center', padding:'0'}}>
                                 <button className="ReadmoreButton">Delete</button></td>
                            </tr>
