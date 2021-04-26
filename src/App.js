@@ -9,6 +9,7 @@ import Services from './component/pages/Services';
 import Shop from './component/pages/Shop';
 import Adduser from './component/UserData/Adduser';
 import Edituser from './component/UserData/Edituser';
+import Viewuser from './component/UserData/Viewuser';
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
@@ -27,7 +28,8 @@ export default class App extends Component {
                 <Route exact path="/services" component ={Services}/>
                 <Route exact path="/shop" component ={Shop}/>
                 <Route exact path="/home/adduser" component ={Adduser}/>
-                <Route exact path="/home/edituser:id" component ={Edituser}/>
+                <Route exact path="/home/edituser/:id" component ={Edituser}/>
+                <Route exact path="/home/viewuser/:id" component ={Viewuser}/>
             </Switch>
             <FooterSection/>
             </Router>

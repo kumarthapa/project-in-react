@@ -4,7 +4,6 @@ import {LINKBLOCK,sampledata} from '../assets/helper/helper';
 export default class Footer extends Component {
   render() {
     return (
-      // <div className="footerLink">
             <ul>
             <li style={{border:'none'}}>{LINKBLOCK()}</li>
             <li>
@@ -23,7 +22,6 @@ export default class Footer extends Component {
             <a href="#">{sampledata()}</a>
             </li>
             </ul>
-          // </div> 
     )
   }
 }

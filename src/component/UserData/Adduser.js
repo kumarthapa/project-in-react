@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 export default class Adduser extends Component {
@@ -15,16 +16,24 @@ export default class Adduser extends Component {
         
         onSubmitform = (e) =>{
             e.preventDefault();
+            // const {name,email,phone} = this.state;
+
+            // if((name == !'')&&(email == !'')&&(phone == !'')){
+            // }
+            // else{
+            //     alert('Please fill all the fields!');
+            // }
             console.log(this.state);
             axios.post("http://localhost:3003/users", this.state)
             .then(response =>{
-                console.log(response);
-                
+                console.log(response); 
             })
             .catch(error =>{
-                console.log("heloo sorry sorry" + error);
+                console.log("Api---" + error);
             })
-        }
+                alert('Add successfully');
+            }
+    
     render() {
         return (
             <div>
@@ -59,10 +68,11 @@ export default class Adduser extends Component {
                     </div>
                     </div>
                     <div className="row">
-                        <br/>
+                    <br/>
                     <input type="submit" value="Submit"/>
                     </div>
                     </form> 
+                    <button className="ReadmoreButton"><Link  to="/project-in-react">Back to home</Link></button>
                      <br/><br/><br/>
                     </div>  
             </div>
