@@ -6,7 +6,9 @@ export default class Edituser extends Component {
   constructor(props){
     super(props);
     this.state = {
-          users:''
+      name:'',
+      email:'',
+      phone:''
     }
   } 
   OnchangeDatainpute = (e) =>{
@@ -15,17 +17,15 @@ export default class Edituser extends Component {
     onSubmitform = async e =>{
         e.preventDefault();
         const id = this.props.match.params.id
-        await axios.put(`http://localhost:3003/users/${id}`, this.state.users)
-        alert('Add successfully');
-        console.log(this.state.users)
+        await axios.put(`http://localhost:3003/users/${id}`, this.state)
+        alert('Edit successfully');
     }
-     componentDidMount = async () =>{
+     componentDidMount = async e =>{
        const id = this.props.match.params.id
        const result = await axios.get(`http://localhost:3003/users/${id}`)
        .then((result) =>{
-        this.setState({users:result.data});
-        // console.log(this.state.users);
-        // alert('Add successfully');
+        const users = result.data
+        this.setState({name: users.name, email: users.email, phone: users.phone});
         })
         .catch(error =>{
             console.log(error);
@@ -33,7 +33,7 @@ export default class Edituser extends Component {
         
     }
     render() {
-        
+      const {name,email,phone} = this.state;
         return (
             <div>
               <div className="HTcontainer">
@@ -47,7 +47,7 @@ export default class Edituser extends Component {
                     <label for="fname">Name</label>
                     </div>
                     <div className="col-75">
-                    <input type="text" id="fname" onChange={this.OnchangeDatainpute} name="name" defaultValue={this.state.users.name} placeholder="Your name..."/>
+                    <input type="text" id="fname" onChange={this.OnchangeDatainpute} name="name" value={name} placeholder="Your name..."/>
                     </div>
                     </div>
                     <div className="HTrow">
@@ -55,7 +55,7 @@ export default class Edituser extends Component {
                     <label for="email">Email</label>
                     </div>
                     <div className="col-75">
-                    <input type="text" id="email" onChange={this.OnchangeDatainpute}  name="email" defaultValue={this.state.users.email} placeholder="Your email..."/>
+                    <input type="text" id="email" onChange={this.OnchangeDatainpute}  name="email" value={email} placeholder="Your email..."/>
                     </div>
                     </div>
                     <div className="HTrow">
@@ -63,7 +63,7 @@ export default class Edituser extends Component {
                     <label for="fname">Phone</label>
                     </div>
                     <div className="col-75">
-                    <input type="text" id="phone" onChange={this.OnchangeDatainpute}  name="phone" defaultValue={this.state.users.phone} placeholder="Your phone..."/>
+                    <input type="text" id="phone" onChange={this.OnchangeDatainpute}  name="phone" value={phone} placeholder="Your phone..."/>
                     </div>
                     </div>
                     <div className="row">

@@ -16,22 +16,22 @@ export default class Adduser extends Component {
         
         onSubmitform = (e) =>{
             e.preventDefault();
-            // const {name,email,phone} = this.state;
+            const {name,email,phone} = this.state;
 
-            // if((name == !'')&&(email == !'')&&(phone == !'')){
-            // }
-            // else{
-            //     alert('Please fill all the fields!');
-            // }
-            console.log(this.state);
-            axios.post("http://localhost:3003/users", this.state)
+            if((name == '')||(email == '')||(phone == '')){
+                alert('Please fill all the fields!');
+            }
+            else{
+                  axios.post("http://localhost:3003/users", this.state)
             .then(response =>{
-                console.log(response); 
+                // console.log(response); 
             })
             .catch(error =>{
                 console.log("Api---" + error);
-            })
-                alert('Add successfully');
+            }) 
+            alert('Add successfully');
+            this.props.history.push("/project-in-react")
+            }
             }
     
     render() {
@@ -72,7 +72,6 @@ export default class Adduser extends Component {
                     <input type="submit" value="Submit"/>
                     </div>
                     </form> 
-                    <button className="ReadmoreButton"><Link  to="/project-in-react">Back to home</Link></button>
                      <br/><br/><br/>
                     </div>  
             </div>

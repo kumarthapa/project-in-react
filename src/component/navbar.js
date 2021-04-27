@@ -15,7 +15,7 @@ export default class Navbar extends Component {
               <div className="navContant">
               <nav className="NavbarItems">
                    <h1 className="navbar-logo">BASSIC 88</h1>
-                   <div className="menu-icone" onClick={handleClick}><span className={this.state.clicked ? '=' : 'X'}>=</span></div>
+                   <div className="menu-icone" onClick={handleClick}><span>{this.state.clicked ? 'x' : '='}</span></div>
                    <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                        {
                            MenuItems.map((item,index)=>{
