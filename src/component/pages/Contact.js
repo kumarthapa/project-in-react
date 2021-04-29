@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Formheading,Nameheadingtext,Name,Email,Phone} from '../../assets/helper/helper';
+import {Formheading,Nameheadingtext,Name,Email,Phone} from '../../services/helper/helper';
 export default class Contact extends Component {
     render() {
         return (

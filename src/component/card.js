@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CardImage from '../assets/images/290x180.gif'
-import {Nullamlacusduii,Rdmrbtn} from '../assets/helper/helper';
+import {Nullamlacusduii,Rdmrbtn} from '../services/helper/helper';
 
 export default class card extends Component {
     render() {

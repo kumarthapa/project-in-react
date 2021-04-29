@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 // import {BASIC,FreeHTML,Home,Shop,Services,About,Contact} from '../assets/helper/helper';
-import {MenuItems} from "../assets/helper/MenuItems";
+import {MenuItems} from "../services/helper/MenuItems";
 
 
 export default class Navbar extends Component {

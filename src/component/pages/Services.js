@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import {Servicespage,Servicespagetext} from '../../assets/helper/helper';
+import {Servicespage,Servicespagetext} from '../../services/helper/helper';
 export default class Services extends Component {
     render() {
         return (

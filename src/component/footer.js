@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import {LINKBLOCK,sampledata} from '../assets/helper/helper';
+import {LINKBLOCK,sampledata} from '../services/helper/helper';
 export default class Footer extends Component {
   render() {
     return (

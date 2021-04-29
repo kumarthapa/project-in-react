@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Aboutus,WhoWeAre} from '../../assets/helper/helper';
+import {Aboutus,WhoWeAre} from '../../services/helper/helper';
 export default class About extends Component {
     render() {
         return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Nullamlacus,Nullamlacustext,Rdmrbtn} from '../assets/helper/helper';
+import {Nullamlacus,Nullamlacustext,Rdmrbtn} from '../services/helper/helper';
 import BottomImage from '../assets/images/450x250.gif'
 
 

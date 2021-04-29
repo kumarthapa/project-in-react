@@ -10,6 +10,8 @@ import Shop from './component/pages/Shop';
 import Adduser from './component/UserData/Adduser';
 import Edituser from './component/UserData/Edituser';
 import Viewuser from './component/UserData/Viewuser';
+// import HomeContainer from './containers/HomeContainer'
+
 
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
@@ -21,6 +23,7 @@ export default class App extends Component {
             <div>
             <Router>
             <Navbar/>
+            {/* <HomeContainer/> */}
             <Switch>
                 <Route exact path="/project-in-react" component ={Home}/>
                 <Route exact path="/contact" component ={Contact}/>

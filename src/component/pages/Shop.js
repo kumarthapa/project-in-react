@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Turmeric from '../../assets/images/Turmeric.jpg'
-import {products} from '../../assets/helper/helper';
+import {products} from '../../services/helper/helper';
 export default class Shop extends Component {
     render() {
         return (
