@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 // import {BASIC,FreeHTML,Home,Shop,Services,About,Contact} from '../assets/helper/helper';
 import {MenuItems} from "../services/helper/MenuItems";
-
 
 export default class Navbar extends Component {
     state = {clicked: false}
@@ -21,9 +20,7 @@ export default class Navbar extends Component {
                            MenuItems.map((item,index)=>{
                            return (<li key={index}><Link  to={item.url} className={item.cName}>{item.title}</Link></li>)
                            })
-
                        }
-                       
                    </ul>
                </nav>
               </div>

@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import {Formheading,Nameheadingtext,Name,Email,Phone} from '../../services/helper/helper';
 export default class Contact extends Component {
+    
+
     render() {
+       
         return (
             <div>
-              <div className="HTcontainer">
+              <div className="HTcontainer"> 
                 <h2>{Formheading()}</h2>
                 <br/>
                 <p>{Nameheadingtext()}</p>
                 <br/>
+               
                 <form>
                 <div className="HTrow">
                     <div className="col-25">

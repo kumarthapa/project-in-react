@@ -7,7 +7,6 @@ export default class BodySection extends Component {
     render() {
         return (
             <>
-            
             <div className="card">
                 <div>
                 <Card title="Indonectetus facilis"/>
