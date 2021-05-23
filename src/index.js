@@ -8,7 +8,7 @@ import './assets/css/Project.css';
 import App from './App'
 
 const store=createStore(rootReducer)
-console.log('store data' , store)
+//console.log('store data' , store)
 
 
 ReactDom.render(
