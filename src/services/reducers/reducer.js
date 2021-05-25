@@ -2,8 +2,8 @@
 import {ADD_TO_TEXT} from "../constants";
 const initialState = {
   username:[],
+  Cardbox:['1 To 24']
 };
-
 export default function cardItems(state = initialState, action) {
   switch (action.type) {
       case ADD_TO_TEXT:

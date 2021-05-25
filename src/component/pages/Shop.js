@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addTotext } from "../../services/action/actions";
+import Studentdata from "./Studentdata"
 class Shop extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: [],
+      name: ['Click and add your card Box'],
       Newname:[]
     }
   }
@@ -22,21 +23,33 @@ class Shop extends Component {
       this.setState({Newname: [...this.state.Newname,this.props.username.username]})
     }
   }
-
+ 
+  onClearHandler = () =>{
+    this.setState({Newname: []})
+  }
   render() {
+
     return (
       <>
-        <div style={{ display: 'flex', width: '800px', margin: '30px auto' }}>
-          <div style={{ padding: '20px', color: 'white', backgroundColor: 'cornflowerblue', borderRadius: '5px', margin: 'auto 10px', height: '250px' }}>
-            <h2 style={{ margin: '10px 0', padding: '10px 0' }}>Please click button and change your text</h2>
+      <Studentdata/>
+        <div style={{width: '800px', margin: '30px auto' }}>
+          <div style={{ padding: '20px', color: 'white', backgroundColor: 'cornflowerblue', borderRadius: '5px', margin: 'auto 10px'}}>
+          <div style={{ padding: '20px', backgroundColor: 'cornflowerblue', borderRadius: '5px', margin: 'auto 10px'}}>
+          <div style={{ margin: '10px 0', padding: '10px 0',display:'flex', flexWrap:'wrap'}}>
+            {this.state.Newname.map((uName,index)=>{return <p key={index} style={{margin:'5px', padding:'20px', 
+            backgroundColor:'yellowgreen', textAlign:'center', borderRadius:'4px', width:'100px'}}>{index+1}</p>})}
+            </div>
+          </div>
             <input type="text" name="name" onChange={this.onchangeHandler} style={{ margin: '10px 0', padding: '10px 7' }} value={this.state.name} />
 
-            <button onClick={this.onClickHandler} style={{ padding: '16px 20px', backgroundColor: 'hotpink', color: 'white', borderRadius: '7px', border: 'none', fontSize: '17px' }}>Add Text</button>
+            <button onClick={this.onClickHandler} style={{ padding: '16px 20px', backgroundColor: 'darkgreen', color: 'white', 
+            borderRadius: '7px', border: 'none', fontSize: '17px' }}>Add Card </button>
+
+            <button onClick={this.onClearHandler}  style={{ padding: '16px 20px', margin:'8px', backgroundColor: 'crimson', color: 'white', 
+            borderRadius: '7px', border: 'none', fontSize: '17px' }}>Clear Card</button>
 
           </div>
-          <div style={{ padding: '20px', color: 'white', backgroundColor: 'cornflowerblue', borderRadius: '5px', margin: 'auto 10px', height: '250px' }}>
-          <h3 style={{ margin: '10px 0', padding: '10px 0',display:'flex', flexDirection:'column'}}>{this.state.Newname.map((uName,index)=>{return <p key={index}>{uName}</p>})}</h3>
-          </div>
+         
         </div>
       </>
     );
