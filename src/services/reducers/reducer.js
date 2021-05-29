@@ -1,16 +1,24 @@
-//'cardItems' my parant is services/reducers/index.js
-import {ADD_TO_TEXT} from "../constants";
+//import {ADD_TO_TEXT} from "../constants";
 const initialState = {
-  username:[],
-  Cardbox:['1 To 24']
+  list :[],
+  hett :['heoo1234']
 };
 export default function cardItems(state = initialState, action) {
   switch (action.type) {
-      case ADD_TO_TEXT:
+      case 'ADD_TODO':
+      const {id,data} = action.payload
       //console.log('reducer', action)
-      return {...state, username: action.data};
-
+      return {...state, 
+        list: [
+          ...state.list,
+          {
+             id: id,
+             data: data
+          }
+      ]
+      };
     default:
       return state;
   }
 }
+
