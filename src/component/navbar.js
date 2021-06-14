@@ -1,30 +1,28 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import {BASIC,FreeHTML,Home,Shop,Services,About,Contact} from '../assets/helper/helper';
-import {MenuItems} from "../services/helper/MenuItems";
+import { MenuItems } from "../services/helper/MenuItems";
 
 export default class Navbar extends Component {
-    state = {clicked: false}
+    state = { clicked: false }
     render() {
-       const handleClick = ()=>{
-            this.setState({clicked: !this.state.clicked})
+        const handleClick = () => {
+            this.setState({ clicked: !this.state.clicked })
         }
         return (
-            <>
-              <div className="navContant">
-              <nav className="NavbarItems">
-                   <h1 className="navbar-logo">BASSIC 88</h1>
-                   <div className="menu-icone" onClick={handleClick}><span>{this.state.clicked ? 'x' : '='}</span></div>
-                   <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                       {
-                           MenuItems.map((item,index)=>{
-                           return (<li key={index}><Link  to={item.url} className={item.cName}>{item.title}</Link></li>)
-                           })
-                       }
-                   </ul>
-               </nav>
-              </div>
-            </>
+            <div className="navContant">
+                <nav className="NavbarItems">
+                    <h1 className="navbar-logo">BASSIC 88</h1>
+                    <div className="menu-icone" onClick={handleClick}><span>{this.state.clicked ? 'x' : '='}</span></div>
+                    <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+                        {
+                            MenuItems.map((item, index) => {
+                                return (<li key={index}><Link to={item.url} className={item.cName}>{item.title}</Link></li>)
+                            })
+                        }
+                    </ul>
+                </nav>
+            </div>
         )
     }
 }
